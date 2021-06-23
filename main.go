@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/DMax-w/calculatorP/api"
+	"github.com/DMax-w/calculator/api"
 	"log"
 	"net/http"
 )
