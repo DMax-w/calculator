@@ -2,6 +2,7 @@ package api
 
 import (
 	"encoding/json"
+	"github.com/DMax-w/calculator/calculate"
 	"net/http"
 )
 
@@ -15,7 +16,7 @@ func AddHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	result, err := calculate(p.a, p.b, add)
+	result, err := calculate.Calculate(p.a, p.b, calculate.Add)
 	if err != nil {
 		resp.ErrCode = err.Error()
 		json.NewEncoder(w).Encode(resp)
