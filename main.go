@@ -11,6 +11,7 @@ func handleRequests() {
 	http.HandleFunc("/api/sub", api.SubHandler)
 	http.HandleFunc("/api/mul", api.MulHandler)
 	http.HandleFunc("/api/div", api.DivHandler)
+
 	log.Fatal(http.ListenAndServe("", nil))
 }
 

@@ -4,6 +4,7 @@ import "errors"
 
 func Calculate(a, b float64, do string) (float64, error) {
 	var result float64
+
 	switch do {
 	case Add:
 		result = a + b
@@ -15,7 +16,7 @@ func Calculate(a, b float64, do string) (float64, error) {
 		result = a / b
 	default:
 		return 0, errors.New("undefined do")
-
 	}
+
 	return result, nil
 }
