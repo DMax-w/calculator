@@ -12,7 +12,7 @@ func handleRequests() {
 	http.HandleFunc("/api/mul", api.MulHandler)
 	http.HandleFunc("/api/div", api.DivHandler)
 
-	log.Fatal(http.ListenAndServe("", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
 func main() {
