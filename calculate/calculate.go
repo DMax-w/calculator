@@ -13,6 +13,10 @@ func Calculate(a, b float64, do string) (float64, error) {
 	case Mul:
 		result = a * b
 	case Div:
+		if b == 0 {
+			return 0, errors.New("division by 0")
+		}
+
 		result = a / b
 	default:
 		return 0, errors.New("undefined do")
