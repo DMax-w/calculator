@@ -6,4 +6,4 @@ docker build . -t calc
 
 docker run calc
 
-#http://172.17.0.2:8080/api/div?a=25&b=5
+http://172.17.0.2:8080/api/div?a=25&b=5
